@@ -1,4 +1,5 @@
 name: msp
+description: Multiwii Serial Protocol(MSP) library for crystal.
 version: 0.1.0
 
 authors:

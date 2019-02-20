@@ -1,6 +1,6 @@
-# msp
+# msp.cr
 
-TODO: Write a description here
+Multiwii Serial Protocol(MSP) library for crystal.
 
 ## Installation
 
@@ -9,7 +9,7 @@ TODO: Write a description here
    ```yaml
    dependencies:
      msp:
-       github: your-github-user/msp
+       github: uCibar/msp.cr
    ```
 
 2. Run `shards install`

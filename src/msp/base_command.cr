@@ -32,7 +32,7 @@ module MSP
     end
 
     def self.subclasses
-			{{ @type.subclasses }}
-		end
+      {{ @type.subclasses }}
+    end
   end
 end

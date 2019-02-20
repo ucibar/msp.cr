@@ -1,6 +1,6 @@
 module MSP
   enum Code
-    IDENT = 100
+    IDENT           = 100
     STATUS
     RAW_IMU
     SERVO
@@ -21,7 +21,7 @@ module MSP
     WP
     BOXIDS
     SERVO_CONF
-    SET_RAW_RC = 200
+    SET_RAW_RC      = 200
     SET_RAW_GPS
     SET_PID
     SET_BOX
@@ -34,8 +34,8 @@ module MSP
     SELECT_SETTING
     SET_HEAD
     SET_SERVO_CONF
-    SET_MOTOR = 214
-    BIND = 240
-    EEPROM_WRITE = 250
+    SET_MOTOR       = 214
+    BIND            = 240
+    EEPROM_WRITE    = 250
   end
 end

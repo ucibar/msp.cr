@@ -1,6 +1,6 @@
 module MSP::Get
   @[JSON::Serializable::Options(emit_nulls: true)]
-  struct Attitude
+  struct Attitude < MSP::Get::Command
     @@code = MSP::Code::ATTITUDE
 
     getter angx : Int16?,

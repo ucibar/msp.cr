@@ -2,11 +2,11 @@ module MSP::Get
   struct Attitude
     @@code = MSP::Code::ATTITUDE
 
-    getter angx : Int16,
-      angy : Int16,
-      heading : Int16
+    getter angx : Int16?,
+      angy : Int16?,
+      heading : Int16?
 
-    def initialize(@angx, @angy, @heading)
+    def initialize(@angx = nil, @angy = nil, @heading = nil)
     end
 
     def self.from_slice(data : Bytes)

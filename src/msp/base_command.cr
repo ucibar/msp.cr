@@ -3,6 +3,7 @@ module MSP
     macro inherited
       class_getter direction : Char
       macro inherited
+        include JSON::Serializable
         @@direction = {{@type}}.direction
         class_getter code : MSP::Code
 
@@ -12,7 +13,7 @@ module MSP
           io = IO::Memory.new
           io.write (MSP::PREAMBLE + @@direction + '\u{0}').to_slice # '\u{0}' for Data Size
           io.write_byte code_u8 # MSP Code
-          data.each { |dt| io.write_bytes(dt, MSP::ByteFormat) unless dt.zero? }
+          data.each { |dt| io.write_bytes(dt, MSP::ByteFormat) }
           io.write_byte 0_u8 # Checksum
           
           slice = io.to_slice
@@ -28,7 +29,7 @@ module MSP
     end
 
     def data
-      {{ @type.instance_vars }}
+      {{ @type.instance_vars }}.compact
     end
 
     def self.subclasses

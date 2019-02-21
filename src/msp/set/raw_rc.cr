@@ -5,8 +5,8 @@ module MSP::Set
 
     getter roll : UInt16?,
       pitch : UInt16?,
-      yaw : UInt16?,
       throttle : UInt16?,
+      yaw : UInt16?,
       aux1 : UInt16?,
       aux2 : UInt16?,
       aux3 : UInt16?,

@@ -1,4 +1,5 @@
 module MSP::Get
+  @[JSON::Serializable::Options(emit_nulls: true)]
   struct Attitude
     @@code = MSP::Code::ATTITUDE
 

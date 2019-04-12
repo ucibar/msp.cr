@@ -11,6 +11,7 @@ module MSP
   TO_MWC            = '<'                  # MSP Message To Multiwii Controller
   FROM_MWC          = '>'                  # MSP Message From Multiwii Controller
   SIZE_BYTE_INDEX   = 3                    # Byte Index Of 'data-size' Byte
+  CODE_BYTE_INDEX   = 4                    # Byte Index of 'msp-code' Byte
   DATA_BEGIN_INDEX  = 5                    # Byte Index Of 'data' Begin
   SIZE_WITHOUT_DATA = DATA_BEGIN_INDEX + 1 # MSP Message Byte Size Without Data Bytes, '+ 1' Is Checksum Byte
 

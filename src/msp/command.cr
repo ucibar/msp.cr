@@ -37,10 +37,10 @@ module MSP
 
     def self.from_slice(slice : Bytes)
       raise "Invalid MSP Command: Command not start with MSP preamble!" if (slice[0] != MSP::PREAMBLE[0].ord || slice[1] != MSP::PREAMBLE[1].ord)
-      direction = self.subclasses.find { |subclass| subclass.direction === slice[MSP::SIZE_BYTE_INDEX-1] }
+      direction = self.subclasses.find { |subclass| subclass.direction === slice[MSP::SIZE_BYTE_INDEX - 1] }
       raise "Invalid MSP Command: Invalid MSP direction!" if direction.nil?
-      command = direction.subclasses.find {|subclass| subclass.code.value == slice[MSP::CODE_BYTE_INDEX] }
-      raise "Invalid MSP Command: Incalid Command Code!" if command.nil? 
+      command = direction.subclasses.find { |subclass| subclass.code.value == slice[MSP::CODE_BYTE_INDEX] }
+      raise "Invalid MSP Command: Incalid Command Code!" if command.nil?
       command.from_slice slice[MSP::DATA_BEGIN_INDEX, slice.size - MSP::DATA_BEGIN_INDEX - 1]
     end
 

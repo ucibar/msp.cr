@@ -4,8 +4,8 @@ module MSP::Get
     @@code = MSP::Code::ANALOG
 
     getter vbat : UInt8?,
-    intPowerMeterSum : UInt16?,
-    rssi : UInt16?
+      intPowerMeterSum : UInt16?,
+      rssi : UInt16?
 
     getter amperage : UInt16?
 
